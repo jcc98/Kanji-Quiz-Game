@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Japanese vocab quiz</title>
+</head>
+<body class="bg-light">
+    <section class=" pt5 pb-5 text-center border ">
+        <h1>漢字のAPIを活かしてゲームを作ってみました</h1>
+    <small>表示される漢字の使う言葉を１０秒以内に書き込むというルールとなっております。合っている場合は、ランダムで次の漢字が表示されます。</small>
+    <small><br>学年毎に学ばれているという形となっています</small>
+    </section>
+    
+    <div class="flex-container">
+        <div class="difficulty-select easy" id="easy">簡単</div>
+        <div class="difficulty-select medium" id="medium">普通</div>
+        <div class="difficulty-select hard" id="hard">難しい</div>
+    </div>
+    <label for="grade-select" class="grade-select">Select a grade:</label>
+    <select id="grade-select" class="grade-select">
+        <option value="grade-1">Grade One</option>
+        <option value="grade-2">Grade Two</option>
+        <option value="grade-3">Grade Three</option>
+        <option value="grade-4">Grade Four</option>
+        <option value="grade-5">Grade Five</option>
+        <option value="grade-6">Grade Six</option>
+        <option value="grade-8">Grade Eight</option>
+    </select>
+    <button class="start-btn" id="start-btn">ゲームを始める</button>
+
+        <div class="container">
+            <div class="timer" id="timer">
+                <div class="timer-red" id="timer-red"></div>
+            </div>
+            <div class="correct-answers"></div>
+            <div class="wrong-answers"></div>
+            <div class="score"></div>
+            <div class="jp-word" id="jp-word"></div>
+            <input type="text" class="jp-input" id="jp-input">
+            <div class="answer" id="answer" ></div>
+            <div class="list-results" id="list-results"></div>
+            <button class="start-btn replay-btn" id="replay-btn">Play again</button>
+            <div class="score" id="score"></div>
+            <div class="game-over" id="game-over">ゲームオーバー <br> スコアーは <span id="game-over-score"></span>
+                <button class="start-btn" id="replay-btn-two">またやりますか？</button>
+                <div class="missed-word" id="missed-word"></div>
+
+            </div>
+
+        </div>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- <input type="text" id="search-kanji" class="search-kanji" placeholder="Input a kanji.." onkeypress="handleKeyPress(event)"> -->
+        <!-- <button class="btn-search" id="btn-search">Search</button> -->
+        <div class="result-search" id="result-search"></div>
+<script src="script.js"></script>
+</body>
+</html>

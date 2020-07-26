@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 600px;
+    height: 400px;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+small {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.grade-select {
+    font-size: 18px;
+}
+
+h1, small {
+    padding: 20px;
+}
+
+.start-btn {
+    z-index: 2;
+    margin: 20px 0;
+    border: #000 0.5px solid;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+
+    &:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgb(71, 71, 71);
+        transition: 0.5s all;
+    }
+
+    &:active {
+        transform: scale(1.05);
+        transform: translateY(3px);
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+}
+
+.timer {
+    margin-top: 30px;
+    width: 100%;
+    background-color: #fff;
+    height: 30px;
+    border: 1px solid lightgray;
+    display: none;
+    
+}
+
+.timer-red {
+    background-color: red;
+    width: 0%;
+    height: 30px;
+}
+
+.jp-word {
+    font-size: 50px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: all 0.8s;
+
+    // &:hover {
+    //     background-color: rgb(174, 180, 206);
+    //     cursor: pointer;
+    //     &:after {
+    //         content: "分からない場合はクリックしてください";
+    //         position: absolute;
+    //         top: 14px;
+    //         right: 15px;
+    //         font-size: 25px;
+    //         color: rgb(255, 255, 255);
+            
+
+    //     }
+    // }
+}
+
+.list-results {
+    font-size: 20px;
+    margin-top: 20px;
+    display: block;
+
+}
+
+.replay-btn {
+display: none;
+}
+
+.game-over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    color: #fff;
+    height: 100vh;
+    font-size: 60px;
+    display: none;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    
+}
+
+.flex-container {
+    display: flex;
+}
+
+.difficulty-select {
+    margin-top: 15px;
+    border: solid #000 1px;
+    padding: 9px 4px;
+    cursor: pointer;
+    transition: all 0.5s;
+    user-select: none;
+    &:hover {
+        background-color: rgb(44, 44, 44);
+        color: rgb(245, 245, 245);
+    }
+    &:not(:last-child) {
+        margin-right: 40px;
+    }
+    &:active {
+        transform: translateY(5px);
+    }
+}
+
+.difficulty-clicked {
+background-color: rgb(44, 44, 44);
+color: rgb(245, 245, 245);
+}
+
+.missed-word {
+    background-color: #fff;
+    color: #000;
+    font-size: 15px;
+}
